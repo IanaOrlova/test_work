@@ -205,18 +205,26 @@ header{
     position: absolute;
     bottom: 13%;
     left: 41%;
-    max-width: 330px;
-    //transform: skew(20deg,-48deg);
-    //transform: translate(-48deg);
-    //transform: rotate3d(1, 1, 1, 45deg);
-    transform: rotate(-48deg);
-    .one{
-      background: $colorThree;
-      min-width: 330px;
-      min-height: 640px;
-      img{
-        margin: 0 auto;
+    max-width: 332px;
+    transform:  rotate(-37.8deg) translateX(6px) skewX(11deg) skewY(0.5deg);
+    .section__slider__element{
+      min-height: 621px;
+      outline: none;
+      background: darkslategray;
+      .img_slider{
+        transform: rotate(38deg);
+        position: relative;
+        top: 266px;
+        img{
+          margin: 0 auto;
+        }
       }
+    }
+    .background_one{
+      background: #232323;
+    }
+    .background_two{
+      background: #000000;
     }
   }
   .blocks_container{
@@ -267,13 +275,14 @@ header{
   }
   .prev{
     position: absolute;
-    left: -82px;
-    bottom: 16%;
+    left: -149px;
+    bottom: 35%;
     width: 71px;
     height: 71px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 50px;
     cursor: pointer;
+    transform: rotate(37deg);
     i{
       padding-top: 26px;
       padding-left: 16px;
@@ -288,8 +297,8 @@ header{
 
   .next{
     position: absolute;
-    //left: -180px;
-    //bottom: 42%;
+    left: 371px;
+    bottom: 42%;
     width: 71px;
     height: 71px;
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -297,7 +306,7 @@ header{
     cursor: pointer;
     i{
       padding-top: 15px;
-      padding-left: 22px;
+      padding-left: 27px;
       color: rgba(255, 255, 255, 0.5);
       font-size: 40px;
       &:hover{
@@ -876,6 +885,12 @@ footer{
   .second{
     .slider{
       padding-left: 74px;
+      .section__slider{
+        left: 35%;
+      }
+    }
+    .blocks_container{
+      right: 100px;
     }
   }
 
@@ -926,14 +941,33 @@ footer{
   }
 }
 
+@media all and  (max-width: 1210px) {
 
+  .second{
+    .slider{
+      padding-left: 74px;
+      .section__slider{
+        left: 35%;
+      }
+    }
+    .blocks_container{
+      right: 100px;
+    }
+  }
+
+}
 
 @media all and  (max-width: 1370px) {
 
   .second{
     .slider{
       padding-left: 24px;
-
+      .section__slider{
+        left: 32%;
+      }
+    }
+    .blocks_container{
+      right: 100px;
     }
   }
 
@@ -963,6 +997,21 @@ footer{
   }
 }
 
+@media all and  (max-width: 1210px) {
+
+  .second{
+    .slider{
+      padding-left: 10px;
+      .section__slider{
+        left: 30%;
+      }
+    }
+    .blocks_container{
+      right: 15px;
+    }
+  }
+
+}
 
 @media all and  (max-width: 1180px) {
 
