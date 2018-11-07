@@ -902,6 +902,9 @@ footer{
       background: $colorTwo;
       display: flex;
       padding: 33px 58px 48px;
+      .row{
+        display: flex;
+      }
       .logo{
         padding-right: 40px;
         padding-top: 15px;
@@ -1469,24 +1472,29 @@ footer{
         .section_content{
           position: relative;
           display: block;
-          ul{
-            padding-right: 0;
-            padding-top: 10px;
-          }
-          .contacts{
-            position: absolute;
-            right: 30px;
-            top: 30px;
-            .img{
-              padding-bottom: 3px;
-            }
+          max-width: 300px;
+          margin: 0 auto;
+          padding: 23px 16px 48px;
+          .row{
+            padding-top: 30px;
             ul{
-              li{
-                padding: 0 5px;
+              padding-right: 25px;
+              padding-top: 10px;
+            }
+            .contacts{
+              ul{
+                padding-right: 0;
+                li{
+                  padding: 0 7px;
+                }
               }
             }
-
+            .logo{
+              padding-right: 26px;
+            }
           }
+
+
         }
       }
 

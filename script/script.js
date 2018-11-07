@@ -25,11 +25,12 @@ $(document).ready(function () {
         });
     });
 
-    //===================================//
-
+    //============= появление обьектов ================//
 
 
     Revealator.effects_padding = '-300';
+
+    //============== слайдер  =======================//
 
     $('.second .section__slider').slick({
         infinite:true,
@@ -52,7 +53,7 @@ $(document).ready(function () {
 
 
 
-    //           бургер меню
+    //============  бургер меню  =================//
 
     $(function() {
         $('.menu__icon').on('click', function() {
@@ -68,7 +69,7 @@ $(document).ready(function () {
         });
     });
 
-    //======================//
+
 
     $(function() {
         $('.burger').on('click', function() {
@@ -86,7 +87,7 @@ $(document).ready(function () {
 
 
 
-})
+});
 
 
 function onScroll(){
