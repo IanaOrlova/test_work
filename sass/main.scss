@@ -16,15 +16,14 @@ body{
   background:#f5f6f8 ;
 }
 
+button{
+  outline: none;
+  border: none;
+}
+
 .container{
   max-width: 970px;
   margin: 0 auto;
-}
-
-button{
-  border: none;
-  outline: none;
-  text-transform: uppercase;
 }
 
 ul{
@@ -52,6 +51,7 @@ header{
     .first-row{
       position: relative;
       display: inline-block;
+
       padding: 13px 20px;
       text-transform: uppercase;
       cursor: pointer;
@@ -93,6 +93,90 @@ header{
       }
     }
   }
+
+  //================burger====================//
+
+
+  .responsive_menu {
+
+    .menu__links {
+      display: none;
+
+      li{
+        display: inline-block;
+      }
+
+    }
+
+  }
+
+  .menu__icon {
+    display: none;
+    width: 30px;
+    height: 36px;
+    position: relative;
+    cursor: pointer;
+    right: 40px
+  }
+
+  .menu__icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  .menu__icon span:nth-child(1) {
+    top: 0;
+  }
+
+  .menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+    top: 13px;
+  }
+
+  .menu__icon span:nth-child(4) {
+    top: 26px;
+  }
+
+  .responsive_menu.menu_state_open .menu__icon span:nth-child(1) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+  }
+
+  .responsive_menu.menu_state_open .menu__icon span:nth-child(2) {
+    transform: rotate(45deg);
+    background: $colorThree;
+  }
+
+  .responsive_menu.menu_state_open  .menu__icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    background:$colorThree;
+  }
+
+  .responsive_menu.menu_state_open  .menu__icon span:nth-child(4) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+  }
+
+  .responsive_menu.menu_state_open .menu__links {
+    display: block;
+  }
+
+
+
+
+
+
+
+
+
   .header_text{
     max-width: 400px;
     padding-top: 19.5%;
@@ -409,8 +493,8 @@ header{
       max-width: 410px;
     }
     button{
+      @include button;
       padding: 18px 52px;
-      background: $colorThree;
       border-radius: 36px;
       color: $colorOne;
       font-size: 12px;
@@ -615,15 +699,14 @@ header{
         transition: 0.5s;
         button{
           position: relative;
-          background: $colorThree;
+          @include button;
+          border-radius: 0;
           color: $colorTwo;
-          border: none;
-          outline: none;
-          text-transform: uppercase;
           padding: 17px;
           top: 45%;
           &:hover{
             cursor: pointer;
+
           }
         }
         &:hover{
@@ -725,6 +808,7 @@ header{
       }
       button{
         background: transparent;
+        outline: none;
         padding: 20px 42px;
         border-radius: 36px;
         cursor: pointer;
@@ -736,7 +820,7 @@ header{
           color: white;
         }
         button{
-          background: $colorThree;
+          @include button;
         }
       }
       &:first-child{
@@ -1143,6 +1227,21 @@ footer{
 
 
 @media all and  (max-width: 840px) {
+  header{
+    nav{
+      .first-row{
+        padding: 13px 12px;
+        .second-row{
+          width: 85%;
+          li{
+            padding: 13px 0 13px 12px;
+
+          }
+        }
+      }
+    }
+
+  }
   .first{
     .section_content{
       display: block;
@@ -1254,7 +1353,76 @@ footer{
   }
 }
 
+@media all and (min-width: 706px){
+  header{
+    .responsive_menu.menu_state_open{
+      .menu__links{
+        display: none;
+      }
+
+    }
+  }
+  .menu {
+    ul {
+      li{
+        display: inline-block !important;
+      }
+
+    }
+  }
+}
+
+
+
 @media all and  (max-width: 705px) {
+  header{
+    nav{
+      .first-row{
+        &:hover{
+          .second-row{
+            position: relative;
+            color: white;
+          }
+        }
+      }
+    }
+    .menu {
+      ul {
+        li{
+          display: none;
+        }
+
+      }
+    }
+
+
+    .responsive_menu {
+      padding-top: 0;
+
+      .menu__icon {
+        display: inline-block;
+      }
+
+      .menu__links {
+        position: absolute;
+        top: 92px;
+        right: 40px;
+        background: 0 0;
+        width: 42%;
+        padding: 0;
+        background: $colorThree;
+        li {
+          display: block;
+          text-align: right;
+        }
+        .menu__links-item{
+          display: block;
+        }
+      }
+    }
+  }
+
+
   .sixth{
     display: none;
   }
