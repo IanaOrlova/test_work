@@ -16,7 +16,7 @@
 <body>
 <header>
     <div class="container">
-        <nav>
+        <nav class="nav__menu">
             <div class="logo">
                 <img src="img/rec_b.png" alt="logo" />
             </div>
@@ -41,13 +41,17 @@
                 <li class="first-row">Blog</li>
                 <li class="first-row" >Work</li>
                 <li class="first-row">Start a Project</li>
-                <!--<li>-->
-                    <!--<div>-->
-                    <!--<span></span>-->
-                    <!--<span></span>-->
-                    <!--<span></span>-->
-                    <!--</div>-->
-                <!--</li>-->
+                <li class="first-row burger_menu">
+                    <div class="burger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul class="second-row_burger">
+                        <li class="blocks_menu"><a href="#first">first section</a></li>
+                        <li class="blocks_menu"><a href="#second">second section</a></li>
+                        <li class="blocks_menu"><a href="#third">third section</a></li>
+                        <li class="blocks_menu"><a href="#fourth">fourth section</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
@@ -89,7 +93,7 @@
         </div>
     </div>
 </header>
-<section class="first section">
+<section  class="first section">
     <div class="container">
         <div class="section_content">
             <div class="block revealator-zoomin revealator-delay6 revealator-once">
@@ -131,7 +135,7 @@
         </div>
     </div>
 </section>
-<section class="second section">
+<section id="first" class="second section">
     <div class="section_content">
         <div class="slider revealator-zoomin revealator-delay2 revealator-once">
             <div class="img">
@@ -155,8 +159,8 @@
                 </div>
             </div>
         </div>
-        <div class="blocks_container revealator-zoomin revealator-delay2 revealator-once">
-            <div class="block">
+        <div class="blocks_container">
+            <div class="block revealator-zoomin revealator-delay2 revealator-once">
                 <div class="header">
                     <div class="img">
                         <img src="img/browsers.png" alt="browsers"/>
@@ -168,7 +172,7 @@
                     </div>
                 </div>
             </div>
-            <div class="block">
+            <div class="block revealator-zoomin revealator-delay2 revealator-once">
                 <div class="header">
                     <div class="img">
                         <img src="img/briefcase.png" alt="briefcase"/>
@@ -179,7 +183,7 @@
                     </div>
                 </div>
             </div>
-            <div class="block">
+            <div class="block revealator-zoomin revealator-delay2 revealator-once">
                 <div class="header">
                     <div class="img">
                         <img src="img/edit.png" alt="edit"/>
@@ -190,7 +194,7 @@
                     </div>
                 </div>
             </div>
-            <button>get started</button>
+            <button class="revealator-zoomin revealator-delay2 revealator-once">get started</button>
         </div>
     </div>
 </section>
@@ -232,7 +236,7 @@
         </div>
     </div>
 </section>
-<section class="fourth section ">
+<section id="second" class="fourth section ">
     <div class="background">
         <div class="title_text revealator-zoomin revealator-delay2 revealator-once">
                 <h4>This will change everything</h4>
@@ -435,7 +439,7 @@
         </div>
     </div>
 </section>
-<section class="eighth section">
+<section id="third" class="eighth section">
     <div class="title_text revealator-zoomin revealator-delay2 revealator-once">
         <h4>Join over 1 million customers</h4>
     </div>
@@ -466,7 +470,7 @@
     </div>
 </section>
 
-<footer>
+<footer id="fourth">
     <div class="title_text revealator-zoomin revealator-delay2 revealator-once">
         <h4>This will change everything</h4>
     </div>

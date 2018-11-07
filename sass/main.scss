@@ -51,7 +51,6 @@ header{
     .first-row{
       position: relative;
       display: inline-block;
-
       padding: 13px 20px;
       text-transform: uppercase;
       cursor: pointer;
@@ -59,6 +58,11 @@ header{
       font-size: 12px;
       &:first-child{
         color: $colorTwo;
+      }
+      &:last-child{
+        &:hover{
+          background: transparent;
+        }
       }
       i{
         position: relative;
@@ -72,14 +76,49 @@ header{
         .second-row{
           display: block;
           color: $colorTwo;
+        }
+      }
+      .burger{
+        width: 22px;
+        height: 12px;
+        position: relative;
+        i{
+          color: $colorTwo;
+          font-size: 14px;
+        }
+      }
+      .second-row_burger{
+        display: none;
+        position: absolute;
+        top:43px;
+        left: -31px;
+        text-align: right;
+        .blocks_menu{
+          padding: 13px 20px;
+          a{
+            color: black;
+          }
+          &:hover{
+            background: black;
+            a{
+              color: white;
+            }
 
-
+          }
         }
       }
     }
+    .burger_menu{
+      position: relative;
+    }
+    .burger_menu.menu_open .second-row_burger{
+      display: block;
+    }
+
     .second-row{
       position: absolute;
       left: 0;
+      top: 38px;
       display: none;
       padding-left: 0;
       width: 100%;
@@ -113,10 +152,11 @@ header{
   .menu__icon {
     display: none;
     width: 30px;
+    height: 25px;
     position: relative;
     cursor: pointer;
-    right: 20px;
-    bottom: 12px;
+    right: 10px;
+    bottom: -7px;
   }
 
   .menu__icon span {
@@ -168,14 +208,6 @@ header{
   .responsive_menu.menu_state_open .menu__links {
     display: block;
   }
-
-
-
-
-
-
-
-
 
   .header_text{
     max-width: 400px;
@@ -1230,7 +1262,12 @@ footer{
   header{
     nav{
       .first-row{
-        padding: 13px 12px;
+        padding: 13px 8px;
+        .second-row_burger{
+          left: -43px;
+          text-align: right;
+
+        }
         .second-row{
           width: 85%;
           li{
@@ -1240,6 +1277,7 @@ footer{
         }
       }
     }
+
 
   }
   .first{
@@ -1364,7 +1402,7 @@ footer{
   }
   .menu {
     ul {
-      li{
+      .first-row{
         display: inline-block !important;
       }
 
@@ -1399,17 +1437,16 @@ footer{
       .menu__links {
         position: absolute;
         top: 92px;
-        right: 20px;
+        right: 0;
         background: 0 0;
-        width: 42%;
+        width: 100%;
         padding: 0;
-        background: $colorThree;
-        li {
-          display: block;
-          text-align: right;
-        }
+        background: rgba(38, 230, 230, 0.9);
         .menu__links-item{
           display: block;
+          text-align: center;
+
+
         }
       }
     }
@@ -1453,6 +1490,7 @@ footer{
 @media all and  (max-width: 470px) {
   header{
     .header_text{
+      max-width: 371px;
       h3{
         font-size: 40px;
         line-height: 45px;

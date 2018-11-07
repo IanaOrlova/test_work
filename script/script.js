@@ -1,5 +1,34 @@
 $(document).ready(function () {
 
+
+    //                функция скрола
+
+
+    $(document).on("scroll", onScroll);
+
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a').each(function () {
+            $(this).removeClass('active');
+        });
+        $(this).addClass('active');
+
+        var target = this.hash;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 1000, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+
+    //===================================//
+
+
+
     Revealator.effects_padding = '-300';
 
     $('.second .section__slider').slick({
@@ -41,5 +70,36 @@ $(document).ready(function () {
 
     //======================//
 
+    $(function() {
+        $('.burger').on('click', function() {
+            $(this).closest('.burger_menu')
+                .toggleClass('menu_open');
+        });
+
+        $('.blocks_menu').on('click', function() {
+
+
+            $(this).closest('.burger_menu')
+                .removeClass('menu_open');
+        });
+    });
+
+
 
 })
+
+
+function onScroll(){
+    var scrollPosition = $(document).scrollTop();
+    $('.nav__menu a').each(function () {
+        var currentLink = $(this);
+        var refElement = $(currentLink.attr("href"));
+        if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+            $('.nav__menu ul li a').removeClass("active");
+            currentLink.addClass("active");
+        }
+        else{
+            currentLink.removeClass("active");
+        }
+    });
+}
