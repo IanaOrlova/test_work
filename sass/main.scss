@@ -1480,6 +1480,9 @@ footer{
             ul{
               padding-right: 25px;
               padding-top: 10px;
+              &:nth-child(2){
+                padding-right: 45px;
+              }
             }
             .contacts{
               ul{
@@ -1490,7 +1493,7 @@ footer{
               }
             }
             .logo{
-              padding-right: 26px;
+              padding-right: 45px;
             }
           }
 
