@@ -113,10 +113,10 @@ header{
   .menu__icon {
     display: none;
     width: 30px;
-    height: 36px;
     position: relative;
     cursor: pointer;
-    right: 20px
+    right: 20px;
+    bottom: 12px;
   }
 
   .menu__icon span {
@@ -136,11 +136,11 @@ header{
   }
 
   .menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
-    top: 13px;
+    top: 8px;
   }
 
   .menu__icon span:nth-child(4) {
-    top: 26px;
+    top: 16px;
   }
 
   .responsive_menu.menu_state_open .menu__icon span:nth-child(1) {
@@ -1387,18 +1387,11 @@ footer{
       }
     }
     .menu {
-      ul {
-        li{
-          display: none;
-        }
-
-      }
+      display: none;
     }
 
 
     .responsive_menu {
-      padding-top: 0;
-
       .menu__icon {
         display: inline-block;
       }
