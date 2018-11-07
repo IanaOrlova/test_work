@@ -125,6 +125,7 @@ header{
       li{
         font-size: 12px;
         padding: 13px 0 13px 20px;
+        display: block;
         &:hover{
           color: white;
           background: $colorTwo;
@@ -140,10 +141,16 @@ header{
 
     .menu__links {
       display: none;
-
-      li{
-        display: inline-block;
+      .second-row{
+        text-align: center;
+        top: 8px;
+        li{
+          display: block;
+          text-align: center;
+        }
       }
+
+
 
     }
 
@@ -1269,9 +1276,9 @@ footer{
 
         }
         .second-row{
-          width: 85%;
+          left: -3px;
           li{
-            padding: 13px 0 13px 12px;
+            padding: 13px 0
 
           }
         }
