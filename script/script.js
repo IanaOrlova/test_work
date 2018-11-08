@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
 
-    //                функция скрола
+    //===================  функция скрола ==============//
 
 
     $(document).on("scroll", onScroll);
 
-    $('a[href^="#"]').on('click', function (e) {
+    $('.scroll[href^="#"]').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
 
-        $('a').each(function () {
+        $('.scroll').each(function () {
             $(this).removeClass('active');
         });
         $(this).addClass('active');
@@ -92,11 +92,11 @@ $(document).ready(function () {
 
 function onScroll(){
     var scrollPosition = $(document).scrollTop();
-    $('.nav__menu a').each(function () {
+    $('.nav__menu .scroll').each(function () {
         var currentLink = $(this);
         var refElement = $(currentLink.attr("href"));
         if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-            $('.nav__menu ul li a').removeClass("active");
+            $('.nav__menu ul .blocks_menu a').removeClass("active");
             currentLink.addClass("active");
         }
         else{
