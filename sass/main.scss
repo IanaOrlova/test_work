@@ -1547,12 +1547,16 @@ footer{
 
   footer {
     .background{
-      padding-top: 235px;
+      background:transparent;
+      padding-top: 80px;
+      padding-bottom: 30px;
     }
     .title_text {
+      top:20px;
       h4 {
         font-size: 38px;
         line-height: 45px;
+        text-align: center;
       }
     }
   }
