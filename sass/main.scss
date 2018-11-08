@@ -9,10 +9,7 @@
   url('../fonts/montserrat-black-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
-
-
 
 
 @font-face {
@@ -21,14 +18,7 @@
   url('../fonts/montserrat-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
-
-
-//
-//@font-face {
-//  font-family: 'montserratlight', sans-serif;
-//}
 
 *{
   font-family: 'montserratlight', sans-serif;
@@ -71,14 +61,21 @@ header{
     .logo{
       margin-left: 10px;
     }
+    li{
+      &:hover{
+        background: black;
+        a{
+          color: white;
+        }
+      }
+    }
     .first-row{
+      font-size: 12px;
       position: relative;
       display: inline-block;
       padding: 13px 20px;
       text-transform: uppercase;
       cursor: pointer;
-
-      font-size: 12px;
       a{
         color: $colorOne;
       }
@@ -86,7 +83,6 @@ header{
         a{
           color: $colorTwo;
         }
-
       }
       &:last-child{
         &:hover{
@@ -100,27 +96,61 @@ header{
         font-size: 10px;
       }
       &:hover{
-        color: white;
         background: $colorTwo;
+        a{
+          color: white;
+        }
         .second-row{
           display: block;
-          color: $colorTwo;
+          li{
+            a{
+              color: $colorTwo;
+            }
+            &:hover{
+              a{
+                color: white;
+              }
+            }
+          }
         }
       }
-      .burger{
-        width: 22px;
-        height: 12px;
+      .second-row{
+        position: absolute;
+        left: 0;
+        top: 38px;
+        display: none;
+        padding-left: 0;
+        width: 100%;
+        li{
+          font-size: 12px;
+          padding: 13px 0 13px 20px;
+          display: block;
+          &:hover{
+            color: white;
+            background: $colorTwo;
+          }
+        }
+      }
+
+      //========================== burger menu for desktop version =====================//
+
+      .burger_menu{
         position: relative;
-        i{
-          color: $colorTwo;
-          font-size: 14px;
+        .burger{
+          width: 22px;
+          height: 12px;
+          position: relative;
+          i{
+            color: $colorTwo;
+            font-size: 14px;
+          }
         }
       }
       .second-row_burger{
         display: none;
         position: absolute;
         top:43px;
-        left: -31px;
+        left: -38px;
         text-align: right;
         .blocks_menu{
           padding: 13px 20px;
@@ -132,118 +162,18 @@ header{
             a{
               color: white;
             }
-
           }
         }
       }
     }
-    .burger_menu{
-      position: relative;
-    }
-    .burger_menu.menu_open .second-row_burger{
-      display: block;
-    }
-
-    .second-row{
-      position: absolute;
-      left: 0;
-      top: 38px;
-      display: none;
-      padding-left: 0;
-      width: 100%;
-      li{
-        font-size: 12px;
-        padding: 13px 0 13px 20px;
+    .menu_open{
+      .second-row_burger{
         display: block;
-        &:hover{
-          color: white;
-          background: $colorTwo;
-        }
       }
     }
   }
 
-  //================burger====================//
-
-
-  .responsive_menu {
-
-    .menu__links {
-      display: none;
-      .second-row{
-        text-align: center;
-        top: 8px;
-        li{
-          display: block;
-          text-align: center;
-        }
-      }
-
-
-
-    }
-
-  }
-
-  .menu__icon {
-    display: none;
-    width: 30px;
-    height: 25px;
-    position: relative;
-    cursor: pointer;
-    right: 10px;
-    bottom: -7px;
-  }
-
-  .menu__icon span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: black;
-    border-radius: 9px;
-    opacity: 1;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
-
-  .menu__icon span:nth-child(1) {
-    top: 0;
-  }
-
-  .menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
-    top: 8px;
-  }
-
-  .menu__icon span:nth-child(4) {
-    top: 16px;
-  }
-
-  .responsive_menu.menu_state_open .menu__icon span:nth-child(1) {
-    top: 18px;
-    width: 0;
-    left: 50%;
-  }
-
-  .responsive_menu.menu_state_open .menu__icon span:nth-child(2) {
-    transform: rotate(45deg);
-    background: $colorThree;
-  }
-
-  .responsive_menu.menu_state_open  .menu__icon span:nth-child(3) {
-    transform: rotate(-45deg);
-    background:$colorThree;
-  }
-
-  .responsive_menu.menu_state_open  .menu__icon span:nth-child(4) {
-    top: 18px;
-    width: 0;
-    left: 50%;
-  }
-
-  .responsive_menu.menu_state_open .menu__links {
-    display: block;
-  }
+  //==================================== end ========================================//
 
   .header_text{
     max-width: 400px;
@@ -267,7 +197,85 @@ header{
       padding-top: 16px;
     }
   }
+
+  //==============================burger menu for mobile version  ===================//
+
+  .responsive_menu {
+    display: none;
+    .menu__icon {
+      width: 30px;
+      height: 25px;
+      position: relative;
+      cursor: pointer;
+      right: 10px;
+      bottom: -7px;
+      span{
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: black;
+        border-radius: 9px;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        &:nth-child(1){
+          top: 0;
+        }
+        &:nth-child(2){
+          top: 8px;
+        }
+        &:nth-child(3) {
+          top: 8px;
+        }
+        &:nth-child(4) {
+          top: 16px;
+        }
+      }
+    }
+    .menu__links {
+      display: none;
+      .second-row{
+        text-align: center;
+        top: 8px;
+        li{
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .menu_state_open{
+    .menu__icon{
+      span{
+        &:nth-child(1) {
+          top: 18px;
+          width: 0;
+          left: 50%;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+          background: $colorThree;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          background:$colorThree;
+        }
+        &:nth-child(4) {
+          top: 18px;
+          width: 0;
+          left: 50%;
+        }
+      }
+    }
+    .menu__links {
+      display: block;
+    }
+  }
+  //=================================== end =======================================//
 }
+
+ //=================================== first section ===============================//
 
 .first{
   text-align: center;
@@ -296,7 +304,6 @@ header{
         text-transform: uppercase;
         color: $colorFour;
         letter-spacing: 1px;
-
         &:hover{
           color: $colorThree;
         }
@@ -335,6 +342,7 @@ header{
   }
 }
 
+//=================================== second section ===============================//
 
 .second{
   background: $colorThree;
@@ -346,6 +354,7 @@ header{
     position: relative;
     max-width: 915px;
     .img{
+      position: relative;
       img{
         display: block;
         width: 100%;
@@ -355,9 +364,9 @@ header{
   .section__slider{
     position: absolute;
     bottom: 13%;
-    left: 41%;
+    left: 29%;
     max-width: 332px;
-    transform:  rotate(-37.8deg) translateX(6px) skewX(11deg) skewY(0.5deg);
+    transform:  rotate(-37.8deg) translateX(11px) skewX(11deg) skewY(0.5deg);
     .section__slider__element{
       min-height: 621px;
       outline: none;
@@ -421,6 +430,7 @@ header{
     width: 100%;
     &:hover{
       cursor: pointer;
+      color: $colorThree;
     }
   }
   .prev{
@@ -444,7 +454,6 @@ header{
       }
     }
   }
-
   .next{
     position: absolute;
     left: 371px;
@@ -464,10 +473,9 @@ header{
       }
     }
   }
-
 }
 
-
+//=================================== third section ===============================//
 
 .third{
   .title_text{
@@ -531,6 +539,8 @@ header{
   }
 }
 
+//=================================== fourth section ===============================//
+
 .fourth{
   .background{
     background:$colorTwo;
@@ -593,9 +603,6 @@ header{
           position: relative;
           top: 170px;
           left: 300px;
-
-          //transform: translateY(-50%) translateX(-21%);
-
         }
         &:nth-child(2){
           background: gray;
@@ -627,6 +634,7 @@ header{
   }
 }
 
+//=================================== fifth section ===============================//
 
 .fifth{
   padding-top: 278px;
@@ -683,7 +691,7 @@ header{
   }
 }
 
-
+//=================================== sixth section ===============================//
 
 .sixth{
   text-align: center;
@@ -730,10 +738,9 @@ header{
     right: 48px;
     bottom: 43px;
   }
-
 }
 
-
+//=================================== seventh section ===============================//
 
 .seventh{
   padding-top: 86px;
@@ -774,7 +781,6 @@ header{
           top: 45%;
           &:hover{
             cursor: pointer;
-
           }
         }
         &:hover{
@@ -834,7 +840,7 @@ header{
   }
 }
 
-
+//=================================== eighth section ===============================//
 
 .eighth{
   text-align: center;
@@ -893,7 +899,6 @@ header{
           &:nth-child(3){
             color:  $colorOne;
           }
-
         }
         button{
           @include button;
@@ -906,11 +911,11 @@ header{
           }
         }
       }
-
     }
   }
 }
 
+//=================================== footer ===============================//
 
 footer{
   .title_text{
@@ -950,7 +955,6 @@ footer{
       ul{
         padding-right: 101px;
         li{
-
           text-transform: uppercase;
           padding: 13px 0 ;
           font-size: 12px;
@@ -962,7 +966,6 @@ footer{
               transition: 0.5s;
             }
           }
-
           &:last-child{
             padding-bottom: 0;
           }
@@ -1031,7 +1034,7 @@ footer{
 
 
 
-//==============================responsive==============================//
+//============================== responsive ==============================//
 
 @media all and  (max-width: 1599px) {
 
@@ -1056,7 +1059,7 @@ footer{
     .slider{
       padding-left: 74px;
       .section__slider{
-        left: 35%;
+        left: 29%;
       }
     }
     .blocks_container{
@@ -1111,21 +1114,6 @@ footer{
   }
 }
 
-@media all and  (max-width: 1210px) {
-
-  .second{
-    .slider{
-      padding-left: 74px;
-      .section__slider{
-        left: 35%;
-      }
-    }
-    .blocks_container{
-      right: 100px;
-    }
-  }
-
-}
 
 @media all and  (max-width: 1370px) {
 
@@ -1133,7 +1121,7 @@ footer{
     .slider{
       padding-left: 24px;
       .section__slider{
-        left: 32%;
+        left: 29%;
       }
     }
     .blocks_container{
@@ -1173,7 +1161,7 @@ footer{
     .slider{
       padding-left: 10px;
       .section__slider{
-        left: 30%;
+        left: 29%;
       }
     }
     .blocks_container{
@@ -1315,25 +1303,27 @@ footer{
 @media all and  (max-width: 840px) {
   header{
     nav{
-      .first-row{
-        padding: 13px 8px;
-        .second-row_burger{
-          left: -43px;
-          text-align: right;
-
-        }
-        .second-row{
-          left: -3px;
-          li{
-            padding: 13px 0
-
+      .menu{
+        margin-right: 10px;
+        .first-row{
+          padding: 13px 8px;
+          .second-row_burger{
+            left: -43px;
+            text-align: right;
+            .blocks_menu{
+              padding: 13px 10px
+            }
+          }
+          .second-row{
+            li{
+              padding: 13px 10px;
+            }
           }
         }
       }
     }
-
-
   }
+
   .first{
     .section_content{
       display: block;
@@ -1363,6 +1353,7 @@ footer{
       }
     }
   }
+
   .fifth{
     .row{
       display: block;
@@ -1393,15 +1384,11 @@ footer{
              padding-left: 38px;
             }
           }
-
         }
-
-      }
-      &:first-child{
-
       }
     }
   }
+
   .sixth{
     .section_content{
       .block{
@@ -1411,13 +1398,13 @@ footer{
       }
     }
   }
+
   .eighth{
     .container{
       .section_content{
         display: block;
       }
     }
-
   }
 
   footer{
@@ -1441,17 +1428,16 @@ footer{
         }
       }
     }
-
   }
 }
 
 @media all and (min-width: 706px){
+
   header{
     .responsive_menu.menu_state_open{
       .menu__links{
         display: none;
       }
-
     }
   }
   .menu {
@@ -1459,7 +1445,6 @@ footer{
       .first-row{
         display: inline-block !important;
       }
-
     }
   }
 }
@@ -1481,13 +1466,8 @@ footer{
     .menu {
       display: none;
     }
-
-
     .responsive_menu {
-      .menu__icon {
-        display: inline-block;
-      }
-
+      display: inline-block;
       .menu__links {
         position: absolute;
         top: 92px;
@@ -1499,17 +1479,26 @@ footer{
         .menu__links-item{
           display: block;
           text-align: center;
-
-
+          a{
+            color: $colorFour;
+          }
+          &:hover{
+            a{
+              color: white;
+            }
+          }
+          .second-row{
+            left: -14px;
+          }
         }
       }
     }
   }
 
-
   .sixth{
     display: none;
   }
+
   footer{
     .background{
       .container{
@@ -1540,11 +1529,8 @@ footer{
               padding-right: 45px;
             }
           }
-
-
         }
       }
-
     }
   }
 }
@@ -1561,11 +1547,6 @@ footer{
     }
   }
 
-  .section{
-    button{
-      padding: 23px 117px;
-    }
-  }
   .third{
     .title_text{
       h4{
@@ -1574,6 +1555,7 @@ footer{
       }
     }
   }
+
   .eighth{
     .title_text{
       h4{

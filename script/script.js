@@ -61,12 +61,12 @@ $(document).ready(function () {
                 .toggleClass('menu_state_open');
         });
 
-        $('.menu__links-item').on('click', function() {
-
-
-            $(this).closest('.responsive_menu')
-                .removeClass('menu_state_open');
-        });
+        // $('.menu__links-item').on('click', function() {
+        //
+        //
+        //     $(this).closest('.responsive_menu')
+        //         .removeClass('menu_state_open');
+        // });
     });
 
 
