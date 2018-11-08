@@ -363,9 +363,9 @@ header{
       outline: none;
       background: darkslategray;
       .img_slider{
-        transform: rotate(38deg);
         position: relative;
         top: 266px;
+        left: 112px;
         img{
           margin: 0 auto;
         }
@@ -590,10 +590,12 @@ header{
         min-height: 578px;
         background: #ebebeb;
         .img_slider{
-          padding-top: 215px;
-          img{
-            margin: 0 200px 0 300px;
-          }
+          position: relative;
+          top: 170px;
+          left: 300px;
+
+          //transform: translateY(-50%) translateX(-21%);
+
         }
         &:nth-child(2){
           background: gray;
@@ -763,7 +765,7 @@ header{
         left: 0;
         right: 0;
         transition: 0.5s;
-        button{
+        a{
           position: relative;
           @include button;
           border-radius: 0;
