@@ -62,7 +62,7 @@ a{
 
 
 header{
-  background: url("../img/banner_123.png") no-repeat center;
+  background: url("../img/banner_1.png") no-repeat center;
   background-size: cover;
   nav{
     padding-top: 51px;
@@ -77,10 +77,16 @@ header{
       padding: 13px 20px;
       text-transform: uppercase;
       cursor: pointer;
-      color: $colorOne;
+
       font-size: 12px;
+      a{
+        color: $colorOne;
+      }
       &:first-child{
-        color: $colorTwo;
+        a{
+          color: $colorTwo;
+        }
+
       }
       &:last-child{
         &:hover{
@@ -245,7 +251,7 @@ header{
     padding-bottom: 26%;
     margin-left: 10px;
     h3{
-      color:  $colorTwo;
+      color:  $colorFour;
       font-size: 72px;
       line-height: 80px;
       text-align: left;
@@ -253,7 +259,7 @@ header{
       text-transform: uppercase;
     }
     p{
-      color:  $colorOne;
+      color:  $colorFour;
       font-size: 12px;
       font-weight: 300;
       text-transform: uppercase;
@@ -274,22 +280,21 @@ header{
       max-width: 271px;
       color: $colorOne;
       h5{
+        color: $colorFour;
         text-transform: uppercase;
         font-size: 14px;
-        font-weight: 300;
         line-height: 22px;
         padding-bottom: 22px;
       }
       p{
         font-size: 14px;
-        font-weight: 300;
         line-height: 22px;
         padding-bottom: 19px;
       }
       a{
         font-size: 11px;
         text-transform: uppercase;
-        color:  $colorOne;
+        color: $colorFour;
         letter-spacing: 1px;
 
         &:hover{
@@ -389,17 +394,15 @@ header{
         .text{
           max-width: 230px;
           h6{
-            color: $colorOne;
+            color: $colorFour;
             font-size: 18px;
-            font-weight: 300;
             line-height: 24px;
             padding-top: 12px;
             padding-bottom:12px;
           }
           p{
-            color:  $colorOne;
+            color: $colorOne;
             font-size: 14px;
-            font-weight: 300;
             line-height: 22px;
             padding-bottom: 10px;
           }
@@ -409,6 +412,7 @@ header{
   }
   button{
     background: $colorTwo;
+    text-transform: uppercase;
     color: white;
     padding: 23px 130px;
     font-size: 12px;
@@ -472,15 +476,14 @@ header{
     padding-top: 105px;
     padding-bottom: 108px;
     h4{
-      color:  $colorOne;
+      color: $colorFour;
       font-size: 72px;
       font-weight: 300;
       padding-bottom: 42px;
     }
     p{
-      color:  $colorOne;
+      color: $colorFour;
       font-size: 18px;
-      font-weight: 300;
       line-height: 26px;
       max-width: 446px;
       margin: 0 auto;
@@ -496,20 +499,20 @@ header{
       margin-left: 10px;
       margin-right: 10px;
       h5{
-        color:  $colorOne;
+        color: $colorFour;
         font-size: 16px;
-        font-weight: 300;
         line-height: 22px;
         padding-bottom: 22px;
       }
       p{
+        color:  $colorOne;
         font-size: 14px;
         line-height: 22px;
         padding-bottom: 22px;
       }
       a{
         text-transform: uppercase;
-        color:  $colorOne;
+        color: $colorFour;
         &:hover{
           color:$colorThree;
         }
@@ -548,7 +551,7 @@ header{
       padding-bottom: 42px;
     }
     p{
-      color:  white;
+      color:  $colorOne;
       font-size: 14px;
       font-weight: 300;
       line-height: 22px;
@@ -558,7 +561,7 @@ header{
       @include button;
       padding: 18px 52px;
       border-radius: 36px;
-      color: $colorOne;
+      color:  $colorFour;
       font-size: 12px;
       font-weight: 300;
       margin-top: 160px;
@@ -637,7 +640,6 @@ header{
       padding-bottom: 36px;
       text-transform: uppercase;
       &:last-child{
-        color:  $colorOne;
         font-size: 18px;
         line-height: 26px;
         text-transform: none;
@@ -658,7 +660,7 @@ header{
           max-width: 208px;
           padding-left: 15px;
           h6{
-            color:  $colorOne;
+            color:  $colorFour;
             font-size: 18px;
             font-weight: 300;
             line-height: 26px;
@@ -695,14 +697,14 @@ header{
       padding-bottom: 68px;
       margin: 0 15px;
       p{
-        color:  $colorOne;
+        color:  $colorFour;
         font-size: 42px;
         max-width: 574px;
         margin: 0 auto;
         &:nth-child(3){
           padding-top: 17px;
           font-size: 12px;
-          color: $colorTwo;
+          color:  $colorFour;
           text-transform: uppercase;
         }
       }
@@ -736,6 +738,7 @@ header{
   padding-bottom: 67px;
   text-align: center;
   h3{
+    color:  $colorFour;
     font-family: 'montserratblack', sans-serif;
     text-transform: uppercase;
     padding-bottom: 37px;
@@ -838,7 +841,7 @@ header{
     padding-top: 80px;
     padding-bottom: 74px;
     h4{
-      color:  $colorOne;
+      color:  $colorFour;
       font-size: 72px;
       font-weight: 300;
     }
@@ -853,10 +856,13 @@ header{
       p{
         color:  $colorOne;
         font-size: 12px;
-        font-weight: 300;
         text-transform: uppercase;
         padding-bottom: 38px;
+        &:first-child{
+          color:  $colorFour;
+        }
         &:nth-child(2){
+          color:  $colorFour;
           font-family: 'montserratblack', sans-serif;
           font-size: 50px;
           font-weight: 900;
@@ -865,13 +871,13 @@ header{
         }
         &:nth-child(3){
           font-size: 14px;
-          font-weight: 300;
           line-height: 22px;
           text-transform: none;
         }
       }
       button{
         background: transparent;
+        text-transform: uppercase;
         outline: none;
         padding: 20px 42px;
         border-radius: 36px;
@@ -882,6 +888,10 @@ header{
         cursor: pointer;
         p{
           color: white;
+          &:nth-child(3){
+            color:  $colorOne;
+          }
+
         }
         button{
           @include button;
