@@ -4,11 +4,34 @@
 
 
 @font-face {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'montserratblack';
+  src: url('../fonts/montserrat-black-webfont.woff2') format('woff2'),
+  url('../fonts/montserrat-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
+
+
+
+@font-face {
+  font-family: 'montserratlight';
+  src: url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+  url('../fonts/montserrat-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+//
+//@font-face {
+//  font-family: 'montserratlight', sans-serif;
+//}
+
 *{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'montserratlight', sans-serif;
   margin: 0;
 }
 
@@ -713,6 +736,7 @@ header{
   padding-bottom: 67px;
   text-align: center;
   h3{
+    font-family: 'montserratblack', sans-serif;
     text-transform: uppercase;
     padding-bottom: 37px;
     font-size: 26px;
@@ -833,6 +857,7 @@ header{
         text-transform: uppercase;
         padding-bottom: 38px;
         &:nth-child(2){
+          font-family: 'montserratblack', sans-serif;
           font-size: 50px;
           font-weight: 900;
           padding-bottom: 27px;
@@ -883,6 +908,7 @@ footer{
     max-width: 1026px;
     margin: 0 auto;
     h4{
+      font-family: 'montserratblack', sans-serif;
       font-size: 90.02px;
       font-weight: 900;
       line-height: 120px;
