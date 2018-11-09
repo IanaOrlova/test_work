@@ -63,9 +63,9 @@ npm install --save-dev gulp-livereload@1.5.0
 
 gulp.task('default', ['browsersync', 'watch']);
 
-/* gulp command runs two tasks => 'browsersync', 'watch'
+// gulp command runs two tasks => 'browsersync', 'watch'
 'browsersync' - display code change in real time.
-'watch' - keeps track of file changes (scss, script.js), if changes occur - files are minimized and the page reloads.*/
+'watch' - keeps track of file changes (scss, script.js), if changes occur - files are minimized and the page reloads.//
 
 gulp.task('browsersync', function () {
     bs.init({
