@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
-
     //===================  функция скрола ==============//
-
 
     $(document).on("scroll", onScroll);
 
@@ -27,7 +25,6 @@ $(document).ready(function () {
 
     //============= появление обьектов ================//
 
-
     Revealator.effects_padding = '-300';
 
     //============== слайдер  =======================//
@@ -41,7 +38,6 @@ $(document).ready(function () {
         nextArrow:'<span class="next"><i class="fas fa-angle-right"></i></span>',
     });
 
-
     $('.fourth .section__slider').slick({
         infinite:true,
         slidesToShow: 1,
@@ -51,8 +47,6 @@ $(document).ready(function () {
         nextArrow:false,
     });
 
-
-
     //============  бургер меню  =================//
 
     $(function() {
@@ -61,15 +55,13 @@ $(document).ready(function () {
                 .toggleClass('menu_state_open');
         });
 
-        // $('.menu__links-item').on('click', function() {
-        //
-        //
-        //     $(this).closest('.responsive_menu')
-        //         .removeClass('menu_state_open');
-        // });
+        $('.menu__links-item').on('click', function() {
+
+
+            $(this).closest('.responsive_menu')
+                .removeClass('menu_state_open');
+        });
     });
-
-
 
     $(function() {
         $('.burger').on('click', function() {
@@ -85,10 +77,7 @@ $(document).ready(function () {
         });
     });
 
-
-
 });
-
 
 function onScroll(){
     var scrollPosition = $(document).scrollTop();
