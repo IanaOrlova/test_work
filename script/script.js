@@ -36,6 +36,9 @@ $(document).ready(function () {
         dots: false,
         prevArrow:'<span class="prev"><i class="fas fa-angle-left"></i></span>',
         nextArrow:'<span class="next"><i class="fas fa-angle-right"></i></span>',
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
     });
 
     $('.fourth .section__slider').slick({
@@ -45,6 +48,9 @@ $(document).ready(function () {
         dots: false,
         prevArrow:'<span class="prev"><i class="fas fa-angle-left"></i></span>',
         nextArrow:false,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
     });
 
     //============  бургер меню  =================//
