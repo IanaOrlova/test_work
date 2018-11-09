@@ -1240,7 +1240,7 @@ footer{
 
   .fourth{
     .background{
-      padding: 100px 0;
+      padding: 50px 0;
       .title_text{
         text-align: center;
         padding-left: 0;
@@ -1336,6 +1336,7 @@ footer{
     .section_content{
       display: block;
       padding-top: 51px;
+      padding-bottom: 0;
       .block{
         margin: 0 auto 20px;
       }
@@ -1355,6 +1356,11 @@ footer{
   }
 
   .fifth{
+    padding-top: 70px;
+    padding-bottom: 40px;
+    .title_text{
+      padding: 0 5px;
+    }
     .row{
       display: block;
       &:last-child{
@@ -1400,9 +1406,13 @@ footer{
   }
 
   .eighth{
+    .title_text{
+      padding: 50px 0;
+    }
     .container{
       .section_content{
         display: block;
+        padding-top: 50px;
       }
     }
   }
@@ -1494,6 +1504,13 @@ footer{
       }
     }
   }
+  .third{
+    .title_text{
+      padding: 50px 5px;
+
+
+    }
+  }
 
   .sixth{
     display: none;
@@ -1574,7 +1591,7 @@ footer{
     .background{
       background:transparent;
       padding-top: 80px;
-      padding-bottom: 30px;
+      padding-bottom: 0;
     }
     .title_text {
       top:20px;
