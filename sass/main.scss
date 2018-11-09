@@ -81,7 +81,6 @@ header{
         color: $colorOne;
       }
       &:first-child{
-        padding-left: 0;
         a{
           color: $colorTwo;
         }
@@ -89,13 +88,16 @@ header{
       &:last-child{
         &:hover{
           background: transparent;
+          cursor: auto;
+          i{
+            cursor: pointer;
+          }
         }
       }
       i{
         position: relative;
         padding-left: 7px;
         font-size: 14px;
-
       }
       &:hover{
         background: $colorTwo;
@@ -443,9 +445,6 @@ header{
       padding-left: 23px;
       color: rgba(255, 255, 255, 0.5);
       font-size: 40px;
-      &:hover{
-        color: white;
-      }
     }
   }
   .next{
@@ -453,13 +452,10 @@ header{
     left: 409px;
     bottom: 47%;
     i{
-      padding-top: 15px;
-      padding-left: 27px;
+      padding-top: 14px;
+      padding-left: 23px;
       color: rgba(255, 255, 255, 0.5);
       font-size: 40px;
-      &:hover{
-        color: white;
-      }
     }
   }
 }
@@ -611,9 +607,6 @@ header{
       padding-left: 20px;
       color: rgba(255, 255, 255, 0.5);
       font-size: 40px;
-      &:hover{
-        color: white;
-      }
     }
   }
 }
@@ -982,6 +975,12 @@ footer{
         }
         .contacts {
           text-align: right;
+          p{
+            &:hover{
+              cursor: auto;
+              color: rgba(255, 255, 255, 0.2);
+            }
+          }
           .img {
             padding-bottom: 62px;
           }
@@ -1159,7 +1158,6 @@ footer{
     .slider{
       top: 311px;
     }
-
     .background{
       .title_text{
         padding-left: 30px;
@@ -1170,9 +1168,7 @@ footer{
     }
     .prev{
       left: -144px;
-
     }
-
   }
 
   .sixth{
@@ -1205,7 +1201,6 @@ footer{
           }
           &:last-child{
             left: 23px;
-
           }
         }
       }
@@ -1251,9 +1246,7 @@ footer{
           margin-top: 77px;
         }
       }
-
     }
-
     .slider{
       display: none;
     }
@@ -1517,6 +1510,7 @@ footer{
             color: $colorFour;
           }
           &:hover{
+            background: black;
             a{
               color: white;
             }
@@ -1531,8 +1525,6 @@ footer{
   .third{
     .title_text{
       padding: 50px 5px;
-
-
     }
   }
 

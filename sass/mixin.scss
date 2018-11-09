@@ -15,11 +15,17 @@
     }
   }
 
+
 @mixin slideArrow{
   position: absolute;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 50px;
   cursor: pointer;
   width: 66px;
-  height: 66px
+  height: 66px;
+  &:hover{
+    i{
+      color: white;
+    }
+  }
 }
