@@ -64,6 +64,7 @@ header{
     }
     li{
       &:hover{
+        transition: 0.5s;
         background: black;
         a{
           color: white;
