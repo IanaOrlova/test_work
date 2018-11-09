@@ -7,7 +7,6 @@
     background-image: linear-gradient(45deg, #21d78e 0%, #298ade 50%, $colorThree 100%);
     background-position: 100% 0;
     background-size: 200% 200%;
-    //font-size: 24px;
     font-weight: 300;
     transition: .5s;
     &:hover {
@@ -15,3 +14,12 @@
       background-position: 0 0;
     }
   }
+
+@mixin slideArrow{
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  cursor: pointer;
+  width: 66px;
+  height: 66px
+}

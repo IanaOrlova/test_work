@@ -50,6 +50,7 @@ a{
   text-decoration: none;
 }
 
+//=================================== header =================================//
 
 header{
   background: url("../img/banner_1.png") no-repeat center;
@@ -434,35 +435,23 @@ header{
     }
   }
   .prev{
-    position: absolute;
-    left: -174px;
+    @include slideArrow;
+    left: -171px;
     bottom: 44%;
-    width: 69px;
-    height: 69px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50px;
-    cursor: pointer;
-    transform: rotate(37deg);
     i{
-      padding-top: 26px;
-      padding-left: 16px;
+      padding-top: 14px;
+      padding-left: 23px;
       color: rgba(255, 255, 255, 0.5);
       font-size: 40px;
-      transform: rotate(-48deg);
       &:hover{
         color: white;
       }
     }
   }
   .next{
-    position: absolute;
-    left: 407px;
+    @include slideArrow;
+    left: 409px;
     bottom: 47%;
-    width: 69px;
-    height:69px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50px;
-    cursor: pointer;
     i{
       padding-top: 15px;
       padding-left: 27px;
@@ -614,14 +603,9 @@ header{
     }
   }
   .prev{
-    position: absolute;
+    @include slideArrow;
     left: -208px;
     bottom: 44%;
-    width: 66px;
-    height: 66px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50px;
-    cursor: pointer;
     i{
       padding-top: 12px;
       padding-left: 20px;
@@ -667,7 +651,7 @@ header{
       .header{
         display: flex;
         .text{
-          max-width: 208px;
+          max-width: 198px;
           padding-left: 15px;
           h6{
             color:  $colorFour;
