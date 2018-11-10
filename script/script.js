@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     //============= появление обьектов ================//
 
-    Revealator.effects_padding = '-300';
+    Revealator.effects_padding = '-400';
 
     //============== слайдер  =======================//
 
