@@ -756,8 +756,9 @@ header{
           @include button;
           border-radius: 0;
           color: $colorTwo;
-          padding: 17px;
-          top: 45%;
+          padding: 14px;
+          top: 47%;
+          font-size: 13px;
           &:hover{
             cursor: pointer;
           }
@@ -902,7 +903,7 @@ footer{
     position: relative;
     top: 133px;
     z-index: 1;
-    max-width: 1026px;
+    max-width: 956px;
     margin: 0 auto;
     h4{
       font-family: 'montserratblack', sans-serif;
@@ -911,7 +912,7 @@ footer{
       line-height: 120px;
       text-align: right;
       text-transform: uppercase;
-      letter-spacing: 5px;
+      letter-spacing: 1px;
     }
   }
   .background{
@@ -1268,6 +1269,9 @@ footer{
     display: none;
   }
   footer {
+    .title_text{
+      padding-right: 10px;
+    }
     .background {
       .container{
         max-width: 850px;
@@ -1607,6 +1611,7 @@ footer{
       padding-bottom: 0;
     }
     .title_text {
+      padding-right: 0;
       top:20px;
       padding-top: 40px;
       h4 {
