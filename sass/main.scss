@@ -875,6 +875,7 @@ header{
       &:hover{
         background:$colorTwo;
         cursor: pointer;
+        transition: 0.1s;
         p{
           color: white;
           &:nth-child(3){
